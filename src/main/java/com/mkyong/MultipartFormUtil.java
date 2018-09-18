@@ -52,7 +52,7 @@ public class MultipartFormUtil {
 			Set<String> keys = parameters.keySet();
 			for(String key : keys){
 				ds.writeBytes(twoHyphens + boundary + end);
-				ds.writeBytes("Content-Disposition: form-data; "+fileId+"=\"");
+				ds.writeBytes("Content-Disposition: form-data; name=\"");
 				ds.write(key.getBytes());
 				ds.writeBytes("\"" + end);
 				ds.writeBytes(end);
