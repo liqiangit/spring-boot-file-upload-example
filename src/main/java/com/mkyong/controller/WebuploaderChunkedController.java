@@ -19,9 +19,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import org.apache.commons.fileupload.FileItem;
-import org.apache.commons.fileupload.FileItemFactory;
-import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
@@ -152,7 +149,7 @@ public class WebuploaderChunkedController {
 	/**
 	 * 
 	 * @param file
-	 * @param request  参数file,md5value,chunk
+	 * @param request  参数file,md5value,chunk,chunks,size,type
 	 * @param response
 	 * @param session
 	 */
