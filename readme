@@ -5,3 +5,4 @@
 
 webuploader分片上传
 http://localhost:8080/bigfile/index
+http://localhost:8084/bigfile/index2
