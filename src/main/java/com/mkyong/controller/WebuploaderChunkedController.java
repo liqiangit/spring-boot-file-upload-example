@@ -96,7 +96,10 @@ public class WebuploaderChunkedController {
 	public String index() {
 		return "index";
 	}
-
+	@GetMapping("/index2")
+	public String index2() {
+		return "index2";
+	}
 	/**
 	 * 获取多部分信息
 	 *

@@ -58,33 +58,6 @@
 <script type="text/javascript">
     var file_md5   = '';   // 用于MD5校验文件
     var block_info = [];   // 用于跳过已有上传分片
-	WebUploader.Uploader.register({
-		"before-send-file" : "beforeSendFile",
-		"before-send" : "beforeSendChunk",
-		"after-send-file" : "afterSendFile"
-	}, {
-		beforeSendFile : function(file) {
-	        log('beforeSendFile...');
-// 			var deferred = WebUploader.Deferred();
-// 			(new WebUploader.Uploader()).md5File(file, 0, 5 * 1024 * 1024).then(function(val) {
-// 				file.wholeMd5 = val;
-// 				deferred.resolve();
-// 			});
-// 			return deferred.promise();
-		},
-		beforeSendChunk : function(block) {
-	        log('beforeSendChunk...');
-		},
-		afterSendFile : function(file) {
-	        log('afterSendFile...');
-// 	        $.post('/bigfile/merge', { md5: file.wholeMd5, fileName: file.name }, function (data) {
-// 	            var object = JSON.parse(data);
-// 	            if (object.respCode=='200') {
-// 	                log("上传成功");
-// 	            }
-// 	        });	        
-		}
-	});
     // 创建上传
     var uploader = WebUploader.create({
         swf: '/webuploader-0.1.5/Uploader.swf',
