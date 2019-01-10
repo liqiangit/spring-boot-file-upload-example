@@ -152,7 +152,7 @@ public class WebuploaderChunkedController {
 	/**
 	 * 
 	 * @param file
-	 * @param request  参数file,md5value,chunk,chunks,size,type
+	 * @param request  参数file,md5value,chunk
 	 * @param response
 	 * @param session
 	 */
@@ -198,7 +198,7 @@ public class WebuploaderChunkedController {
 	/**
 	 * 查询已经存在的分片
 	 * 
-	 * @param params
+	 * @param params	md5
 	 * @param session
 	 * @return
 	 */
@@ -254,7 +254,7 @@ public class WebuploaderChunkedController {
 	/**
 	 * merge:(合并文件). <br/>
 	 * 
-	 * @param params 请求参数
+	 * @param params 请求参数 md5,fileName
 	 */
 	@RequestMapping(value = "merge", method = RequestMethod.POST)
 	@ResponseBody
