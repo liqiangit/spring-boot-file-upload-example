@@ -77,13 +77,15 @@
     });
 
     // 当有文件被添加进队列的时候-md5序列化
-    uploader.on('fileQueued', function (file) {
+    uploader.on('fileQueued', function (file,formData) {
 
         log("正在计算MD5值...");
+        //大文件md5值计算很慢，要等到计算完成才能上传
         uploader.md5File(file)
 
         .then(function (fileMd5) {
             file.wholeMd5 = fileMd5;
+            log("file.wholeMd5="+fileMd5);
             file_md5 = fileMd5;
             log("MD5计算完成。");
 
